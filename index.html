@@ -80,11 +80,11 @@
         <section class="bg-primary" id="one">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <div class="col-md-offset-2 col-md-8 text-center">
                         <h2 class="margin-top-0 text-primary wide-space">HEADER</h2>
                         <br>
                         <p class="text-faded">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <h1 id="countdown"></h1>
                         </p>
                     </div>
                 </div>
@@ -258,21 +258,21 @@
                         <br/>
                         <div class="row fadeIn">
                             <div class="col-md-4">
-                                <a href="https://www.westelm.com/registry/bxrc7ljkgw/registry-list.html" target="blank_"><img src="assets/westelmlogo.png" width="100%"></a>
+                                <a href="https://www.westelm.com/registry/bxrc7ljkgw/registry-list.html" target="blank_"><img src="assets/westelmlogo.png" width="80%"></a>
                             </div>
                             <div class="col-md-4">
-                                <a href="https://www.amazon.com/wedding/registry-suggestion/categories/small-apps?ref_=hit_wr_rs_home" target="blank_"><img src="assets/amazonlogo.png" width="100%"></a></div>
+                                <a href="https://www.amazon.com/wedding/rachel-schaff-noah-fessler-jersey-city-october-2017/registry/T1I8LQ42S2LI" target="blank_"><img src="assets/amazonlogo.png" width="80%"></a></div>
                             <div class="col-md-4">
-                                <a href="https://www.macys.com/wgl/registry/guest/6661627" target="blank_"><img src="assets/macyslogo.png" width="100%"></a>
+                                <a href="https://www.macys.com/wgl/registry/guest/6661627" target="blank_"><img src="assets/macyslogo.png" width="80%"></a>
                             </div>
                         </div>
                         <br/>
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="https://www.anthropologie.com/registry/listing?registryId=YJG2ZWE3OTU4" target="blank_"><img src="assets/anthrologo.png" width="100%"></a>
+                                <a href="https://www.anthropologie.com/registry/listing?registryId=YJG2ZWE3OTU4" target="blank_"><img src="assets/anthrologo.png" width="80%"></a>
                             </div>
                             <div class="col-md-6">
-                                <a href="https://www.williams-sonoma.com/registry/kxkqzg8wph/registry-list.html" target="blank_"><img src="assets/williamslogo.png" width="100%"></a>
+                                <a href="https://www.williams-sonoma.com/registry/kxkqzg8wph/registry-list.html" target="blank_"><img src="assets/williamslogo.png" width="80%"></a>
                             </div>
                         </div>
                     </div>
@@ -305,7 +305,7 @@
                 <div class="row">
                 </div>
                 <br/>
-                <span class="pull-right text-muted small"><a href="#">KJ</a> ©</span>
+                <span class="pull-right text-muted small">©<a href="mailto:kristinjgumbert@gmail.com">kjg</a> </span>
             </div>
         </footer>
         <!-- <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -346,6 +346,39 @@
         <script src="./js/jquery.easing.min.js"></script>
         <script src="./js/wow.js"></script>
         <script src="./js/scripts.js"></script>
+        <script type="text/javascript">
+          // set the date we're counting down to
+var target_date = new Date("Oct 22, 2017").getTime();
+ 
+// variables for time units
+var days, hours, minutes, seconds;
+ 
+// get tag element
+var countdown = document.getElementById("countdown");
+ 
+// update the tag with id "countdown" every 1 second
+setInterval(function () {
+ 
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    // format countdown string + set tag value
+    countdown.innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";  
+ 
+}, 1000);
+        </script>
 </body>
 
 </html>
